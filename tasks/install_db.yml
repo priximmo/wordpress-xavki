@@ -1,0 +1,12 @@
+---
+- name: "[INSTALL DB] - Create DB"
+  mysql_db:
+    name: "{{ mysql_db }}"
+  become: yes
+
+- name: "[INSTALL DB] - Create user"
+  mysql_user:
+    name: "{{ mysql_user }}"
+    password: "{{ mysql_password }}"
+    priv: "*.*:ALL"
+  become: yes

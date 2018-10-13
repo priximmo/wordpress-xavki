@@ -1,0 +1,16 @@
+galaxy_info:
+  author: xavki
+  description: Install wordpress with lamp packages
+
+  license: license (GPLv2, CC-BY, etc)
+
+  min_ansible_version: 2.4
+
+  platforms:
+   - name: Debian
+     versions:
+     - Stretch
+     - Weezy
+
+  galaxy_tags: [wordpress]
+

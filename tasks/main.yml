@@ -1,0 +1,13 @@
+---
+
+# install packages LAMP for wordpress
+- name: "[INSTALL] - packages "
+  include: install_packages.yml
+
+# create database and user
+- name: "[INSTALL] - database"
+  include: install_db.yml
+
+# download, unarchive and setting wordpress
+- name: "[INSTALL] - wordpress"
+  include: install_wordpress.yml

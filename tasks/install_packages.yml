@@ -1,0 +1,23 @@
+---
+
+- name: "[INSTALL PACKAGES] - update cache"
+  apt:
+    update_cache: yes
+  become: yes
+
+- name: "[INSTALL PACKAGES] - apt get LAMP" 
+  apt: 
+    name: "{{ item }}"
+    state: present
+  become: yes
+  with_items: "{{ lamp_packages }}"
+
+- name: "[INSTALL] - start services"
+  service:
+    name: "{{ item }}"
+    state: started
+    enabled: yes
+  become: yes
+  with_items:
+    - mysqld
+    - apache2
