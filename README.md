@@ -1,4 +1,4 @@
-wordpress-xavkir
+wordpress-xavki
 =========
 
 This role install wordpress on Debian stretch with all LAMP packages needed.
